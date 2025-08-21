@@ -1,4 +1,9 @@
-
+title: "Linux Commands"
+description: "Daily used linux commands"
 theme: minima
-title: My Blog
-description: My first GitHub Pages blog
+
+# optional but useful
+author: "Santhosh"
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
