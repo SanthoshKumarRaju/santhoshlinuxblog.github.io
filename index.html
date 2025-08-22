@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linux Basic Commands Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps Journey • Linux + Nginx Blog</title>
+  <meta name="description" content="My 12-week DevOps journey—hands-on with Linux commands, Nginx deployments, and real-world notes." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preload" href="assets/css/style.css" as="style" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Linux Basic Commands</h1>
-    <p>A beginner-friendly guide</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="logo" aria-hidden="true">⬢</span>
+        <span class="brand-text">DevOps Journey</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#posts">Posts</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>1. pwd (Print Working Directory)</h2>
-      <p><b>Usage:</b> <code>pwd</code></p>
-      <p>This command displays the current directory you are in.</p>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <h1>🚀 Week-1: Linux &amp; Nginx in Action</h1>
+          <p>From basic Linux commands to serving a static React app on Nginx—here’s how I’m building foundations for DevOps excellence.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="posts/week-1-linux-basics.html">Read the deep-dive</a>
+            <a class="btn ghost" href="#posts">Browse posts</a>
+          </div>
+          <ul class="meta">
+            <li>Ubuntu • Nginx • React</li>
+            <li>Hands-on • Explanations • Practical checks</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="glass">
+            <h3 class="chip">Command Spotlight</h3>
+            <div class="cmd">
+              <span class="prompt">$</span><code>sudo netstat -tulnp</code>
+            </div>
+            <p class="muted">List open ports &amp; listeners—debug fast when services don’t respond.</p>
+            <div class="divider"></div>
+            <div class="cmd">
+              <span class="prompt">$</span><code>ps aux | grep nginx</code>
+            </div>
+            <p class="muted">Confirm Nginx processes &amp; PIDs in seconds.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>2. ls (List)</h2>
-      <p><b>Usage:</b> <code>ls</code></p>
-      <p>Lists files and directories in the current directory.</p>
-      <ul>
-        <li><code>ls -l</code> → detailed view</li>
-        <li><code>ls -a</code> → show hidden files</li>
-      </ul>
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>Why I’m learning in public</h2>
+        <p>Accountability, collaboration, and clarity. Sharing weekly steps helps me internalize concepts and inspire others to start.</p>
+        <div class="pill-row">
+          <span class="pill">Learn by doing</span>
+          <span class="pill">Explain simply</span>
+          <span class="pill">Ship weekly</span>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>3. cd (Change Directory)</h2>
-      <p><b>Usage:</b> <code>cd directory_name</code></p>
-      <p>Moves you from one directory to another.</p>
-    </section>
+    <section id="posts" class="section">
+      <div class="wrap">
+        <h2>Latest Posts</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-badge">Week-1</div>
+            <h3><a href="posts/week-1-linux-basics.html">Linux Basics + Nginx Deployment (Ubuntu)</a></h3>
+            <p class="muted">ifconfig, ping, netstat, dig/host, ps, pstree, kill, uname, uptime, free, df—and hosting a React app on Nginx.</p>
+            <a class="btn inline" href="posts/week-1-linux-basics.html">Read post →</a>
+          </article>
 
-    <section>
-      <h2>4. mkdir (Make Directory)</h2>
-      <p><b>Usage:</b> <code>mkdir folder_name</code></p>
-      <p>Creates a new directory.</p>
+          <!-- Add more post cards as you publish -->
+        </div>
+      </div>
     </section>
-
-    <section>
-      <h2>5. rmdir (Remove Directory)</h2>
-      <p><b>Usage:</b> <code>rmdir folder_name</code></p>
-      <p>Removes an empty directory.</p>
-    </section>
-
-    <section>
-      <h2>6. touch</h2>
-      <p><b>Usage:</b> <code>touch file.txt</code></p>
-      <p>Creates a new empty file or updates a file’s timestamp.</p>
-    </section>
-
-    <section>
-      <h2>7. cat</h2>
-      <p><b>Usage:</b> <code>cat file.txt</code></p>
-      <p>Displays the contents of a file.</p>
-    </section>
-
-    <section>
-      <h2>8. cp (Copy)</h2>
-      <p><b>Usage:</b> <code>cp source.txt destination.txt</code></p>
-      <p>Copies files or directories.</p>
-    </section>
-
-    <section>
-      <h2>9. mv (Move)</h2>
-      <p><b>Usage:</b> <code>mv old.txt new.txt</code></p>
-      <p>Moves or renames files/directories.</p>
-    </section>
-
-    <section>
-      <h2>10. rm (Remove)</h2>
-      <p><b>Usage:</b> <code>rm file.txt</code></p>
-      <p>Deletes files or directories (use carefully!).</p>
-    </section>
-
-    <section>
-      <h2>11. man (Manual)</h2>
-      <p><b>Usage:</b> <code>man command</code></p>
-      <p>Shows the manual/help for a command.</p>
-    </section>
-
-    <section>
-      <h2>12. echo</h2>
-      <p><b>Usage:</b> <code>echo "Hello World"</code></p>
-      <p>Prints text to the terminal.</p>
-    </section>
-
-    <section>
-      <h2>13. clear</h2>
-      <p><b>Usage:</b> <code>clear</code></p>
-      <p>Clears the terminal screen.</p>
-    </section>
-
-    <section>
-      <h2>14. exit</h2>
-      <p><b>Usage:</b> <code>exit</code></p>
-      <p>Closes the terminal session.</p>
-    </section>
-
   </main>
 
-  <footer>
-    <p>© 2025 Linux Commands Blog | Built for GitHub Pages</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> DevOps Journey • Built for GitHub Pages</p>
+      <div class="dot-sep">
+        <a href="/">Home</a>
+        <a href="#posts">Posts</a>
+        <a href="mailto:you@example.com">Contact</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // tiny nicety: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
