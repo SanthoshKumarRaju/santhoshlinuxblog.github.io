@@ -1,9 +1,0 @@
-title: "Linux Commands"
-description: "Daily used linux commands"
-theme: minima
-
-# optional but useful
-author: "Santhosh"
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
